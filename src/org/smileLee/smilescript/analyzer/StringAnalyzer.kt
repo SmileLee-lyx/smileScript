@@ -33,14 +33,19 @@ class StringAnalyzer(var str: String) {
         while (i < str.length && isBlank(str[i])) ++i
     }
 
-    val firstChar: Char
-        get() {
-            removeBeginningBlank()
-            if (i != str.length)
-                return str[i]
-            else
-                return 0.toChar()
-        }
+    val firstChar: Char get() {
+        removeBeginningBlank()
+        if (i != str.length)
+            return str[i]
+        else
+            return 0.toChar()
+    }
+    val rawFirstChar: Char get() {
+        if (i != str.length)
+            return str[i]
+        else
+            return 0.toChar()
+    }
 
     val beginWithSymbol: Boolean get() = isBeginningOfSymbol(firstChar)
     val beginWithNumber: Boolean get() = isBeginningOfNumber(firstChar)
@@ -82,7 +87,7 @@ class StringAnalyzer(var str: String) {
         }
         val numString: String = str.substring(b, i)
         try {
-            return when (firstChar) {
+            return when (rawFirstChar) {
                 'i', 'I' -> {
                     ++i
                     numString.toInt()
