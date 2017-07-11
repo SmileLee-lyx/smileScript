@@ -26,7 +26,7 @@ System.println(o.f());
 # 使用方法
 在程序中将jar包作为dependency即可使用。
 使用示例：
-//java
+```java
 import org.smileLee.smilescript.stack.Stack;
 import org.smileLee.smilescript.expression.controlExpression.Block;
 import org.smileLee.smilescript.value.Value;
@@ -35,8 +35,9 @@ String expression="......";
 Stack stack = new Stack();
 Block block = Block.parse(expression);
 Value result = block.invoke(stack);
+```
 
-//kotlin
+```kotlin
 import org.smileLee.smilescript.stack.Stack
 import org.smileLee.smilescript.expression.controlExpression.Block
 
@@ -44,3 +45,4 @@ val expression="......"
 val stack = Stack()
 val block = Block.parse(expression)
 val result = block(stack)
+```
