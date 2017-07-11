@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="smilescript:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/smilescript_jar</output-path>
+    <root id="archive" name="smilescript.jar">
+      <element id="module-output" name="smilescript" />
+    </root>
+  </artifact>
+</component>
